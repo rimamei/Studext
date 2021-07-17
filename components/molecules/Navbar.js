@@ -1,12 +1,29 @@
-import React from "react";
-import { Image, NavSearch, NavItem } from "../atoms";
+import React, { useState } from "react";
+import { NavSearch, NavItem, NavMenu } from "../atoms";
+import NavBrand from "../atoms/NavBrand";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="mx-6 py-4 flex items-center">
-      <Image icon="images/logo.png" alt="brand" outerClassName="flex-1" />
-      <NavSearch outerClassName="flex-3" />
-      <div className="flex justify-end flex-5">
+    <nav
+      className={`mx-6 py-4 lg:flex items-center ${
+        isOpen ? "flex-col" : "flex"
+      }`}
+    >
+      <div className="w-full flex lg:flex-1 items-center">
+        <NavBrand />
+        <NavSearch outerClassName="mx-4 w-full" />
+        <NavMenu
+          onClick={() => setIsOpen(!isOpen)}
+          outerClassName="lg:hidden block"
+        />
+      </div>
+      <div
+        className={`flex-col justify-center items-center lg:relative lg:flex-2 lg:flex lg:flex-row ${
+          isOpen ? "flex" : "hidden"
+        }`}
+      >
         <NavItem title="Home">
           <svg
             width="18"

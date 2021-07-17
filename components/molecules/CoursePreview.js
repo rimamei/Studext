@@ -5,13 +5,15 @@ import data from "../../data";
 
 const Story = () => {
   return (
-    <div className="w-full overflow-hidden p-4 wrapper my-4 ">
+    <div className="p-4 wrapper my-4 relative">
       <Title label="Course Preview" outerClassName="text-lg mb-3" />
       <ScrollContainer>
-        <div className="flex cursor-pointer mb-4 overflow-x ">
-          {data.course.slice(0, 2).map((item) => (
-            <CardCourse item={item} />
-          ))}
+        <div className="flex flex-row cursor-pointer">
+          <div className="flex">
+            {data.course.map((item) => (
+              <CardCourse item={item} />
+            ))}
+          </div>
           <div className="flex items-center justify-center w-[296px] h-[158px] text-blue-100 cursor-pointer rounded shadow-content p-4 mx-3 my-2 hover:underline">
             <div className="flex flex-col text-xl mr-5  ">
               <span>View </span>

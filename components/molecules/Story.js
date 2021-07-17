@@ -5,7 +5,7 @@ import data from "../../data";
 
 const Story = () => {
   return (
-    <div className="w-[968px] h-[143px] overflow-hidden p-4 wrapper mb-4">
+    <div className="lg:w-[968px] h-[143px] overflow-hidden p-4 wrapper mb-4">
       <Title label="Story" outerClassName="text-lg mb-3" />
       <ScrollContainer>
         <div className="flex cursor-pointer mb-4">

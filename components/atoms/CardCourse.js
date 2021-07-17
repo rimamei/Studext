@@ -4,9 +4,9 @@ import Rating from "./Rating";
 import Title from "./Title";
 import number from "../../utils/formatNumber";
 
-const CardCourse = ({ item }) => {
+const CardCourse = ({ item, outerClassName }) => {
   return (
-    <div className="w-[296px] h-[158px] rounded-[24px] shadow p-4 mr-4">
+    <div className={`w-[296px] h-[158px] rounded-[24px] shadow p-4 mr-4 relative ${outerClassName}`}>
       <div className="flex">
         <div>
           <Image icon={item.image} />
@@ -14,8 +14,8 @@ const CardCourse = ({ item }) => {
         <div className="ml-4">
           <div className="flex justify-between items-center">
             <Title
-              label={item.title}
-              outerClassName="text-sm leading-5 hover:text-blue-100"
+              label={item.title.length > 14 ? `${item.title.substring(0, 14)}...` : item.title}
+              outerClassName="text-sm leading-5 hover:text-blue-100 delay-100"
             />
             <svg
               width="8"
@@ -43,7 +43,7 @@ const CardCourse = ({ item }) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-around items-center">
+      <div className="flex justify-between items-center">
         <p className="text-[10px] p-1 px-2 text-red-100 rounded-xl h-6 bg-red-10">
           Mulai: <span className="font-bold">{item.date}</span>
         </p>

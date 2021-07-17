@@ -301,6 +301,54 @@ const data = {
       fix_price: 1500000,
     },
   ],
+  chart: [
+    {
+      name: "17 Juli",
+      true: 0,
+      false: -9,
+    },
+    {
+      name: "18 Juli",
+      true: 30,
+      false: 0,
+    },
+    {
+      name: "19 Juli",
+      true: 12,
+      false: -17,
+    },
+    {
+      name: "20 Juli",
+      true: 0,
+      false: -1,
+    },
+    {
+      name: "21 Juli",
+      true: 2,
+      false: -1,
+    },
+    {
+      name: "22 Juli",
+      false: -17,
+      true: 12,
+    },
+    {
+      name: "23 Juli",
+      false: -6,
+      true: 5,
+    },
+    {
+      name: "24 Juli",
+      false: -24,
+      true: 5,
+    },
+    {
+      name: "25 Juli",
+      false: -17,
+      true: 12,
+      amt: 1,
+    },
+  ],
 };
 
 export default data;

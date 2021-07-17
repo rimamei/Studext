@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { Layout, Navbar } from "../components";
+import { CoursePreview, Navbar, Story, TopScore } from "../components";
+import Statistics from "../components/molecules/Statistics";
 
 export default function Home() {
   return (
@@ -12,8 +13,21 @@ export default function Home() {
       <header className="shadow">
         <Navbar />
       </header>
-      <main>
-        <Layout />
+      <main className="m-6">
+        <div className="w-full">
+          <div className="lg:flex">
+            <div>
+              <Story />
+              <Statistics />
+            </div>
+            <div>
+              <TopScore />
+            </div>
+          </div>
+          <div>
+            <CoursePreview />
+          </div>
+        </div>
       </main>
 
       <footer></footer>

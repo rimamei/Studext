@@ -17,11 +17,11 @@ module.exports = {
           100: "#008FFF",
         },
         gray: {
-          100: "#EBEBEB"
+          100: "#EBEBEB",
         },
         red: {
           100: "#DB0038",
-          10: "#FBE6EB"
+          10: "#FBE6EB",
         },
         tosca: {
           100: "#53BAC1",
@@ -31,9 +31,8 @@ module.exports = {
         },
       },
       flex: {
-        2: "2 2 0%",
-        3: "3 3 0%",
-        5: "5 5 0%",
+        2: "2, 2, 0%",
+        3: "3, 3, 0%",
       },
       fontFamily: {
         primary: ["Quicksand", "sans-serif"],
@@ -51,6 +50,7 @@ module.exports = {
         },
         ".navItem:hover svg, .navItem:hover p": {
           color: "#008FFF",
+          transition: "0.5s"
         },
         ".border-story": {
           display: "flex",
@@ -64,7 +64,7 @@ module.exports = {
           "box-shadow": "0px 4px 16px rgba(0, 0, 0, 0.1)",
           "border-radius": "24px",
         },
-        topscore: {
+        ".topscore": {
           background: 'url("/images/peringkat/confetty.png") repeat-x left top',
         },
         "topscore::-webkit-scrollbar": {
@@ -86,8 +86,13 @@ module.exports = {
           background: "#F9F9F9;",
         },
         ".line-through": {
-          "text-decoration-color": "#858585"
-        }
+          "text-decoration-color": "#858585",
+        },
+        ".scroll::-webkit-scrollbar": {
+          width: "0;",
+          height: "0;",
+          background: "transparent;",
+        },
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
     }),
