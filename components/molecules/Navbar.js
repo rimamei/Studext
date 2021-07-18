@@ -20,8 +20,8 @@ const Navbar = () => {
         />
       </div>
       <div
-        className={`flex-col justify-center items-center lg:relative lg:flex-2 lg:flex lg:flex-row ${
-          isOpen ? "flex" : "hidden"
+        className={`lg:relative flex-col items-center lg:relative lg:flex-2 lg:flex lg:flex-row ${
+          isOpen ? "flex h-screen w-screen mt-5" : "hidden"
         }`}
       >
         <NavItem title="Home">

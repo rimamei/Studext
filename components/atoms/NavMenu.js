@@ -2,7 +2,7 @@ import React from "react";
 
 const NavMenu = ({ outerClassName, onClick }) => {
   return (
-    <div className={outerClassName}>
+    <div className={`${outerClassName}`}>
       <button type="button" onClick={onClick}>
         <svg
           width="56"
