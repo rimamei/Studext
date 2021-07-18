@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`mx-6 py-4 lg:flex items-center ${
+      className={`lg:mx-6 py-4 lg:flex items-center ${
         isOpen ? "flex-col" : "flex"
       }`}
     >
